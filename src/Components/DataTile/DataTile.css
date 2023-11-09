@@ -1,0 +1,22 @@
+.data-tile-main {
+    background: #1f2a36;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.data-tile-main > div > img {
+    width: 64px;
+    border-radius: 10px;
+}
+
+.data-tile-main > div > #dt-p1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+.data-tile-main > #dt-p2 {
+    font-size: 22px;
+    color: whitesmoke;
+}
