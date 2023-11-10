@@ -8,6 +8,8 @@ import DataForTile from '../../Data/Data.js'
 import Footer from "../../Components/Footer/Footer.js";
 
 const Home = () => {
+    
+
     return (
         <div className="main-container">
             <Navbar/>

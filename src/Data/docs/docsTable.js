@@ -33,7 +33,7 @@ const docs = [
         path: ''
     },
     {
-        title: 'runnr: cli-tool',
+        title: 'runnr',
         link: '/docs/runnr',
         path: ''
     }

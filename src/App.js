@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="/docs" element={<Docs/>}/>
+        <Route exact path="/docs/install" element={<Docs Page={1}/>}/>
         <Route exact path="/docs/config" element={<ConfigDocs/>}/>
         <Route exact path="/docs/runnr" element={<RunnrDocs/>}/>
       </Routes>

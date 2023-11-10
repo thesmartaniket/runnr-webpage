@@ -78,6 +78,11 @@
 }
 
 .toggle-side-bar > #img2 {
+    transform: rotate(-180deg);
+    padding-left: 10px;
+}
+
+.toggle-side-bar > #img3 {
     margin-right: 20px;
 }
 

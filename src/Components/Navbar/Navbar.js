@@ -11,7 +11,8 @@ const Navbar = () => {
     const navButtons = [
         {title: 'Home', link: '/'},
         {title: 'Documentation', link: '/docs'},
-        {title: 'Install', link: '#'},
+        {title: 'Install', link: '/docs/install'},
+        {title: 'Source Code', link: "https://github.com/thesmartaniket/runnr.git"},
         {title: 'About', link: '#'}
     ]
 
@@ -33,7 +34,7 @@ const Navbar = () => {
         <div className="navbar-main">
             <div onClick={() => navigate('/')} className="left-logo">
                 <img src={NavIcon}/>
-                <img style={{width: '48px'}} src={NavText}/>
+                <img id="logo-text" style={{width: '48px'}} src={NavText}/>
             </div>
 
             <div style={{
@@ -56,7 +57,11 @@ const Navbar = () => {
                                     Transition={'0.35s'}
                                     Cursor={'Pointer'}
                                     FontSize={'14px'}
-                                    OnClick={() => navigate(element.link)}
+                                    OnClick={() => {
+                                        if(element.link.indexOf('https') == -1){
+                                            navigate(element.link)
+                                        }
+                                    }}
                                 />
                             </div>
                         )

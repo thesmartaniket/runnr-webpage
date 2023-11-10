@@ -62,4 +62,8 @@
     .navbar-main{
         padding: 5px;
     }
+
+    #logo-text {
+        display: none;
+    }
 }
