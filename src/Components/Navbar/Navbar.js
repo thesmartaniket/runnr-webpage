@@ -13,7 +13,7 @@ const Navbar = () => {
         {title: 'Documentation', link: '/docs'},
         {title: 'Install', link: '/docs/install'},
         {title: 'Source Code', link: "https://github.com/thesmartaniket/runnr.git"},
-        {title: 'About', link: '#'}
+        {title: 'About', link: '/about'}
     ]
 
     const navigate = useNavigate()

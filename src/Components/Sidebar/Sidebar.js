@@ -13,9 +13,9 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
     const navigate = useNavigate()
     const [selected, setSelected] = useState(Page)
     const [html, setHtml] = useState("")
-    const [showSideBar, setShowSideBar] = useState(false)
     const [width, setWidth] = useState(window.innerWidth)
 
+    var sideBar = document.querySelector('.sidebar-main-container')
     useEffect(() => {
         if(Page  < List.length){
             if(List[Page].path == ''){
@@ -29,8 +29,7 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
         fetch(List[selected].path)
             .then((res) => res.text())
             .then((text) => setHtml(text))      
-        
-        setShowSideBar(false)
+
     }, [selected])
 
     useEffect(() => {
@@ -42,7 +41,6 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
         <div>
             <div style={{
                 zIndex: width < 720?'3':'0',
-                display: width < 720 && showSideBar || width > 720 ?'':"none",
                 marginTop: width < 720?'50px':'0'
             }} className="sidebar-main-container">
                 {
@@ -61,7 +59,9 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
             </div>
             
             <div style={{width: width > 720 ? `${width - 220}px`:''}} className="toggle-side-bar">
-                <img id="img1" src={HamMenu} onClick={() => setShowSideBar(!showSideBar)}/>
+                <img id="img1" src={HamMenu} onClick={() => {
+                        sideBar.classList.toggle('is-close')
+                }}/>
                 <p>{Title}</p>
                 <img id="img2" src={Next} onClick={() => {
                     if(selected > 0){
@@ -82,7 +82,7 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
                 }}/>
             </div>
 
-            <div onClick={() => {setShowSideBar(false)}} className="text-docs-container">
+            <div onClick={() => sideBar.classList.toggle('is-close')} className="text-docs-container">
                 <ReactMarkdown children={html} components={{
                     code(props) {
                         const {children, className, node, ...rest} = props

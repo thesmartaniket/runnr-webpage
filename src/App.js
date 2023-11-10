@@ -3,6 +3,7 @@ import Home from "./Pages/home/home";
 import Docs from "./Pages/docs/docs"
 import ConfigDocs from "./Pages/docs/configDocs.js";
 import RunnrDocs from "./Pages/docs/runnrDocs.js";
+import About from "./Pages/about/about.js"
 import { BrowserRouter as Router} from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/docs/install" element={<Docs Page={1}/>}/>
         <Route exact path="/docs/config" element={<ConfigDocs/>}/>
         <Route exact path="/docs/runnr" element={<RunnrDocs/>}/>
+        <Route exact path="/about" element={<About/>}/>
       </Routes>
     </Router>
   )

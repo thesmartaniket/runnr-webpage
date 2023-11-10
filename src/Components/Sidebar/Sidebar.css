@@ -98,6 +98,16 @@
 }
 
 @media only screen and (max-width: 720px) {
+    .sidebar-main-container {
+        transition: 0.35s;
+        
+        transform: translateX(-220px);
+
+        &.is-close {
+            transform: translateX(0px);
+        }
+    }
+
     .text-docs-container {
         margin-left: 0;
     }
