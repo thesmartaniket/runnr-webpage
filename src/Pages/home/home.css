@@ -1,0 +1,73 @@
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    margin-top: 50px;
+}
+
+.tab-1{
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #437fc0, #4d9ad5);
+    padding: 10px;
+}
+
+.tab-1 > #p1 {
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.tab-1 > #p2 {
+    color: white;
+    font-size: 28px;
+    margin-top: -25px;
+}
+
+.tab-1 > img {
+    margin-top: 50px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.slant-empty {
+    height: 100px;
+    background: linear-gradient(-3deg, #101927 50%, #4d9ad5 50%);
+}
+
+.tab-2 {
+    height: fit-content;
+    background: #101927;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.tab-2 > #p1 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: white;
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.tab-2 > div {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 720px){
+    .tab-1 > #p1 {
+        font-size: 32px;
+    }
+
+    .tab-1 > #p2 {
+        font-size: 16px;
+    }
+}

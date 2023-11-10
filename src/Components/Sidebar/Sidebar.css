@@ -1,0 +1,114 @@
+.sidebar-main-container{
+    color: white;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    border-right: 1px solid #1f2a369e;
+    background: #0d1420;
+    padding: 10px;  
+}
+
+.sidebar-list {
+    transition: 0.1s;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sidebar-list:hover {
+    opacity: 0.5;
+}
+
+.sidebar-list > img {
+    transition: 0.2s;
+    width: 10px;
+    height: 10px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.sidebar-list > p {
+    margin: 0;
+    font-size: 16px;
+} 
+
+.text-docs-container {
+    background: #080d15;
+    color: white;
+    margin-left: 220px;
+    min-height: 100vh;
+    padding: 25px;
+    padding-top: 70px;
+}
+
+.text-docs-container > div > #title {
+    margin: 0;
+    color: white;
+    font-size: xx-large;
+    padding: 15px;
+    border-bottom: 1px solid #1f2a36;
+}
+
+.text-docs-container > div > #paragraph {
+    color: white;
+}
+
+.toggle-side-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    width: 100vw;
+    position: fixed;
+    background: #080d15;
+    border-bottom: 1px solid #1f2a36;
+    z-index: 5;
+}
+
+.toggle-side-bar > img {
+    transition: 0.1s;
+    width: 25px;
+    height: 25px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.toggle-side-bar > #img2 {
+    margin-right: 20px;
+}
+
+.toggle-side-bar > img:hover{
+    opacity: 0.5;
+}
+
+.toggle-side-bar > p {
+    margin-right: auto;
+    color: #52a2da;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 720px) {
+    .text-docs-container {
+        margin-left: 0;
+    }
+
+    .toggle-side-bar > p {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .toggle-side-bar {
+        margin-left: 220px;
+        justify-content: end;
+    }
+
+    .toggle-side-bar > #img1 {
+        display: none;
+    }
+}
