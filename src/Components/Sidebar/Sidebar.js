@@ -14,6 +14,7 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
     const [selected, setSelected] = useState(Page)
     const [html, setHtml] = useState("")
     const [width, setWidth] = useState(window.innerWidth)
+    const [showSB, setShowSB] = useState(false)
 
     var sideBar = document.querySelector('.sidebar-main-container')
     useEffect(() => {
@@ -61,6 +62,7 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
             <div style={{width: width > 720 ? `${width - 220}px`:''}} className="toggle-side-bar">
                 <img id="img1" src={HamMenu} onClick={() => {
                         sideBar.classList.toggle('is-close')
+                        setShowSB(!showSB)
                 }}/>
                 <p>{Title}</p>
                 <img id="img2" src={Next} onClick={() => {
@@ -82,7 +84,12 @@ const Sidebar = ({List = [{title: String, link: String, path: String}], Title = 
                 }}/>
             </div>
 
-            <div onClick={() => sideBar.classList.toggle('is-close')} className="text-docs-container">
+            <div onClick={() => {
+                if(showSB){
+                    sideBar.classList.toggle('is-close')
+                    setShowSB(false)
+                }
+            }} className="text-docs-container">
                 <ReactMarkdown children={html} components={{
                     code(props) {
                         const {children, className, node, ...rest} = props
