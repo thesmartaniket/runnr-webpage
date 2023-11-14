@@ -34,7 +34,7 @@
 
 .slant-empty {
     height: 100px;
-    background: linear-gradient(-3deg, #101927 50%, #4d9ad5 50%);
+    background: linear-gradient(-3deg, #101927 50%, #4d9ad5 calc(50% + 1px));
 }
 
 .tab-2 {
