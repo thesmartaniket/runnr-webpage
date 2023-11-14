@@ -101,7 +101,7 @@
     .sidebar-main-container {
         transition: 0.35s;
         
-        transform: translateX(-220px);
+        transform: translateX(-221px);
 
         &.is-close {
             transform: translateX(0px);
